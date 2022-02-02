@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/body.css">
+</head>
+
+<style>
+    /* body {
+        position: relative;
+        font-family: 'Abel', sans-serif;
+
+    } */
+    /* p, li {
+        font-size: 18px;
+        color: #333;
+    } */
+    header {
+        width: 100%;
+        height: 250px;
+        background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-attachment: fixed;
+        z-index: 9999;
+    }
+    .backAndHome > .back {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        z-index: 9999999;
+        font-size: 1000px;
+        top: 30px;
+        left: 30px;
+    }
+    .details {
+        background-color: #fff;
+        height: 65vh;
+        width: 100%;
+        top: 230px;
+        position: absolute;
+        border-radius: 20px 20px 0 0;
+        overflow-y: scroll;
+        position: fixed;
+        z-index: 99999;
+    }
+
+    .details > .container {
+        min-height: 90vh;
+    }
+    .tags > ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tags > ul > li {
+        list-style: none;
+        padding: 1em;
+        margin: 0 1em;
+        color: #333;
+    }
+
+    .ingredients > ul > li {
+        list-style: none;
+    }
+
+    .ingredients > ul > li::before {
+        content: '\00BB';
+        display: inline-block;
+        margin-right: 1em;;
+        font-size: 1.1em;
+        font-weight: bold;
+        color: red;
+    }
+
+    .video > a {
+        text-decoration: none;
+        border: 1px solid rgba(0, 0, 0, .5);
+        /* padding-left: 3.789rem; */
+    }
+
+    .hideItems {
+        display: none;
+    }
+    .showItems {
+        display: block;
+    }
+</style>
+
+<body>
+    <!-- Visible meals area -->
+    <div class="shown">
+        <!-- Search bar Area -->
+    <section class="Search-bar p-4 mb-4">
+        <div class="container">
+            <nav style="font-family: 'Comforter', cursive;">
+                    <h1 class="display-6 pt-2 fs-3 recipe-planner">
+                        Recipe Planner
+                    </h1>
+            </nav>
+            <div class="search-bar-area mb-4">
+                <h1 class="display-6 fw-bold mb-4">What do you want to cook today?</h1>
+                <div class="d-flex form">
+                    <input class="search-control me-2 search-input bg-light shadow-sm" type="search" placeholder="Enter an ingredient" aria-label="Search">
+                    <button class="btn search-btn bg-success shadow-sm" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                          </svg>
+                    </button>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <!-- caption area -->
+    <section class="mb-4">
+        <div class="container caption alert alert-light shadow" style="width: 90%; border-radius: 20px;">
+            <div class="div caption__image">
+                <img src="./images/background/background2.png" alt="ilustrations" class="img-fluid">
+            </div>
+            <div class="div caption__caption">
+                <p class="fw-light text-muted">Find recipes based on what you already have at home <br>
+                    <span class="fw-bold small">Happy Cooking..</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Display Area -->
+    <section class="mt-4 mb-4">
+        <div class="displayArea container">
+            <div class="data-holder row">
+                <div class="col-md-4 col-sm-9 col-xs-9 col-lg-4 gap-3 imgHoler">
+                    <!--  -->
+
+
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    </div>
+
+    <!-- Hiden recipe area -->
+    <div class="hidden hideItems">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                
+            </div>
+        </header>
+
+        <!-- Back and home buttons -->
+        <div class="backAndHome">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left-short fs-2 back" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+              </svg>
+        </div>
+
+        <!-- Instructions and Ingredients details -->
+        <div class="details">
+            <div class="container">
+                <h1 class="display-4 text-center mt-4 fw-bold text-muted mb-4 details-title"></h1>
+                <div class="tags mt-4 mb-4">
+                    <h5 class="display-5 fs-5 fw-bold">Category:</h5>
+                    <ul>
+                        <li class="alert alert-warning tag-li"></li>
+                    </ul>
+                </div>
+    
+                <div class="ingredients mt-4 mb-4">
+                    <h5 class="display-5 fs-5 fw-bold">Ingredients:</h5>
+                    <ul>
+                        <li class="strIngredient1"></li>
+                        <li class="strIngredient2"></li>
+                        <li class="strIngredient3"></li>
+                        <li class="strIngredient4"></li>
+                        <li class="strIngredient5"></li>
+                        <li class="strIngredient6"></li>
+                        <li class="strIngredient7"></li>
+                        <li class="strIngredient8"></li>
+                    </ul>
+                </div>
+                <div class="instructions mt-4 mb-4">
+                    <h5 class="display-5 fs-5 fw-bold">Instructions:</h5>
+                    <p class="mt-4 instructionsParagraph">
+                        
+                    </p>
+                </div>
+                <div class="video mb-4 mt-4 text-center">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

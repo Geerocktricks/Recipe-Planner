@@ -1,0 +1,11 @@
+// Import bootstrap
+@import './custom-bootstrap';
+
+
+@import './sections/header';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}

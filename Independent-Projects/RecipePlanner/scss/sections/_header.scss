@@ -1,0 +1,49 @@
+
+header {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url('../images/background/background1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .container {
+
+        nav {
+            font-family: 'Comforter', cursive;
+            color: $primary;
+        }
+
+        .row {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate( -50%, -50%);
+
+                h1 {
+
+                    span {
+
+                    }
+                }
+
+                .btn {
+                    padding: 0.9375rem 4.375rem;
+                    font-weight: 700;
+                    width: 100%;
+                }
+
+            @include media-breakpoint-down(sm) {
+                position: absolute;
+                top: 50%;
+                left: 40%;
+                transform: translate(-45%, 0%);
+            }
+        }
+    }
+}
+
+.toAdd {
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)),
+}
